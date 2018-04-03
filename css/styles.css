@@ -14,5 +14,35 @@ header a p{
 	margin: 0;
 }
 .margin-middle{
-	margin-left: 80;
+	margin-left: 477px;
 }
+.cart-img{
+	position: relative;
+}
+
+.cart-number{
+/*	width: 7px;
+	height: 10px;*/
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #3A6BFE;
+	background-size: contain;
+}
+
+.margin-header {
+	margin-top: 78px;
+}
+
+.sign-noshadow:focus {
+	box-shadow: 0 0 0 0;
+}
+
+.color-theme {
+	background-color: #3A6BFE;
+	color: white;
+}
+
+.capitalize {
+    text-transform: capitalize;   
+  }
