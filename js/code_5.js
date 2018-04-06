@@ -26,21 +26,21 @@ var products = {
 	"albums": [
 		{
 			"id": "albums1",
-			"name": "Metallica",
+			"name": "metallica",
 			"category": "albums",
 			"picture_url": "images/metallica.jpg",
 			"price": 400
 		},
 		{
 			"id": "albums2",
-			"name": "Garage Inc",
+			"name": "garage inc",
 			"category": "albums",
 			"picture_url": "images/garage_inc.jpg",
 			"price": 400
 		},
 		{
 			"id": "albums3",
-			"name": "Hardwired",
+			"name": "hardwired",
 			"category": "albums",
 			"picture_url": "images/hardwired.jpg",
 			"price": 400
@@ -49,21 +49,21 @@ var products = {
 	"movies": [
 		{
 			"id": "movies1",
-			"name": "Casper",
+			"name": "casper",
 			"category": "movies",
 			"picture_url": "images/casper.jpg",
 			"price": 450
 		},
 		{
 			"id": "movies2",
-			"name": "The Mask",
+			"name": "the mask",
 			"category": "movies",
 			"picture_url": "images/the_mask.jpg",
 			"price": 450
 		},
 		{
 			"id": "movies3",
-			"name": "Home Alone",
+			"name": "home alone",
 			"category": "movies",
 			"picture_url": "images/home_alone.jpg",
 			"price": 450
@@ -137,7 +137,7 @@ document.getElementById('search-bar').addEventListener('submit', function (e) {
 	e.preventDefault();
 	// var arr = Object.entries(products);
 	var searchBar = document.forms["search-bar"].querySelector("input");
-	var userInput = searchBar.value;
+	var userInput = searchBar.value.toLowerCase();
 	// below code return the value of the option user selected from the 
 	// drop-down menu
 	var optionSelect = document.getElementById('user-select');
