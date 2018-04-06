@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Details</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+
 <body>
 	<header>
 		<div class="fixed-top">
 			<nav class="navbar navbar-light bg-light navbar-expand-lg justify-content-between py-0">
-				<a class="navbar-brand text-secondary px-5 mb-0 h1" href="#"><img src="images/logo-header.png" height="60px"></a>
+				<a class="navbar-brand text-secondary px-5 mb-0 h1" href="index.html">
+					<img src="images/logo-header.png" height="60px">
+				</a>
 				<div class="navbar navbar-expand-lg">
 					<div class="px-5">
 						<div class="dropdown show">
-						  <a class="btn  dropdown-toggle btn-sm color-theme" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    My Account
-						  </a>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						    <a class="dropdown-item" href="#">Profile</a>
-						    <a class="dropdown-item" href="#">Settings</a>
-						    <a class="dropdown-item" href="#">Sign Out</a>
-						  </div>
+							<a class="btn  dropdown-toggle btn-sm color-theme" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+							 aria-expanded="false">
+								My Account
+							</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="#">Profile</a>
+								<a class="dropdown-item" href="#">Settings</a>
+								<a class="dropdown-item" href="#">Sign Out</a>
+							</div>
 						</div>
 						<div class="dropdown">
-							<a class="btn btn-light btn-sm sign-noshadow" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-						    Sign in / Join
-						  	</a>
+							<a class="btn btn-light btn-sm sign-noshadow" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="false"
+							 aria-expanded="false">
+								Sign in / Join
+							</a>
 							<div class="dropdown-menu">
-							  <form class="px-4 py-3">
-							    <div class="form-group">
-							      <label for="exampleDropdownFormEmail1">Email address</label>
-							      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
-							    </div>
-							    <div class="form-group">
-							      <label for="exampleDropdownFormPassword1">Password</label>
-							      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
-							    </div>
-							    <div class="form-check">
-							      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-							      <label class="form-check-label" for="dropdownCheck">
-							        Remember me
-							      </label>
-							    </div>
-							    <button type="submit" class="btn btn-primary">Sign in</button>
-							  </form>
-							  <div class="dropdown-divider"></div>
-							  <a class="dropdown-item" href="#">New around here? Sign up</a>
-							  <a class="dropdown-item" href="#">Forgot password?</a>
+								<form class="px-4 py-3">
+									<div class="form-group">
+										<label for="exampleDropdownFormEmail1">Email address</label>
+										<input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+									</div>
+									<div class="form-group">
+										<label for="exampleDropdownFormPassword1">Password</label>
+										<input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+									</div>
+									<div class="form-check">
+										<input type="checkbox" class="form-check-input" id="dropdownCheck">
+										<label class="form-check-label" for="dropdownCheck">
+											Remember me
+										</label>
+									</div>
+									<button type="submit" class="btn btn-primary">Sign in</button>
+								</form>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">New around here? Sign up</a>
+								<a class="dropdown-item" href="#">Forgot password?</a>
 							</div>
 						</div>
 					</div>
-					<a href="" class="cart-img">
-					  <img src="images/shopping-card.png" width="37px" height="34px">
-					  <span class="badge badge-light cart-number">0</span>
+					<a href="cart.html" class="cart-img">
+						<img src="images/shopping-card.png" width="37px" height="34px">
+						<span class="badge badge-light cart-number">0</span>
 					</a>
 					<button type="button" class="btn color-theme mx-3">
-					  My Cart 
-					  <div><a href="#" class="badge badge-light">1050LE</a></div>
+						My Cart
+						<div>
+							<a href="#" class="badge badge-light">1050LE</a>
+						</div>
 					</button>
 				</div>
 			</nav>
@@ -67,16 +75,16 @@
 					<div class="col">
 						<nav class="navbar justify-content-center">
 							<select id="user-select" class="custom-select color-theme border rounded-0 border-primary">
-								<!-- <option disabled selected>Please choose a Category</option> -->
-								<option value="categ" selected="true" disabled>All Categories</option>
-								<option value="books">Books</option>
-								<option value="movies">Movies</option>
-								<option value="albums">Albums</option>
+								<option value="categ" selected="true">All Categories</option>
 							</select>
-						  	<form id="search-bar" class="form-inline">
-							    <input id="search-input" class="form-control border rounded-0 " type="search" placeholder="Search" aria-label="Search">
-							    <button class="btn btn-dark btn-outline-secondary btn-sm my-2 my-sm-0 border-0 rounded-0" type="submit" onclick="searchFunction();"><a href=""><img src="images/search-icon-white.png" width="30px"></a></button>
-						  	</form>
+							<form id="search-bar" class="form-inline">
+								<input id="search-input" class="form-control border rounded-0 " type="search" placeholder="Search" aria-label="Search">
+								<button class="btn btn-dark btn-outline-secondary btn-sm my-2 my-sm-0 border-0 rounded-0" type="submit" onclick="searchFunction();">
+									<a href="">
+										<img src="images/search-icon-white.png" width="30px">
+									</a>
+								</button>
+							</form>
 						</nav>
 					</div>
 				</div>
@@ -86,20 +94,26 @@
 	<main>
 		<div class="container my-5">
 			<div class="row">
-		        <div class="col-12">
-		          <div class="card flex-md-row mb-4 box-shadow h-md-250 border-0">
-		            <div class="card-body d-flex flex-column align-items-start">
-						<h3 class="mb-0">
-						<a class="text-dark" href="#">Product Name</a>
-						</h3>
-						<div class="mb-1 text-muted">Category: Books</div>
-						<p class="card-text mb-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa itaque, error facere iure dolor odio quas perspiciatis officiis dolore dignissimos, pariatur quibusdam eveniet cum, voluptatum velit optio explicabo. Porro.</p>
-		                <a id="addtocart" href="#" class="btn btn-primary btn-lg btn-block text-uppercase">Add to Cart <span class="badge badge-light"><p class="h5">435LE</p></span></a>
-		            </div>
-		            <img class="card-img-right flex-auto d-none d-md-block" src="images/album.jpg" alt="Card image cap">
-		          </div>
-		        </div>
-		    </div>
+				<div class="col-12">
+					<div class="card flex-md-row mb-4 box-shadow h-md-250 border-0">
+						<div class="card-body d-flex flex-column align-items-start">
+							<h3 class="mb-0">
+								<a class="text-dark" href="#">Product Name</a>
+							</h3>
+							<div class="mb-1 text-muted">Category: Books</div>
+							<p class="card-text mb-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit culpa itaque, error facere iure dolor odio
+								quas perspiciatis officiis dolore dignissimos, pariatur quibusdam eveniet cum, voluptatum velit optio explicabo.
+								Porro.</p>
+							<a id="addtocart" href="#" class="btn btn-primary btn-lg btn-block text-uppercase">Add to Cart
+								<span class="badge badge-light">
+									<p class="h5">435LE</p>
+								</span>
+							</a>
+						</div>
+						<img class="card-img-right flex-auto d-none d-md-block" src="images/album.jpg" alt="Card image cap">
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>
@@ -113,38 +127,65 @@
 					<div class="col-3 mt-4">
 						<h5>My Account</h5>
 						<ul class="list-unstyled text-small">
-			              <li><a class="text-muted" href="#">Cool stuff</a></li>
-			              <li><a class="text-muted" href="#">My Wish list</a></li>
-			              <li><a class="text-muted" href="#">Compare</a></li>
-			              <li><a class="text-muted" href="#">Checkout</a></li>
-			              <li><a class="text-muted" href="#">Login</a></li>
-		            	</ul>
+							<li>
+								<a class="text-muted" href="#">Cool stuff</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">My Wish list</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Compare</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Checkout</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Login</a>
+							</li>
+						</ul>
 					</div>
 					<div class="col-3 mt-4">
 						<h5>Customer Service</h5>
-			            <ul class="list-unstyled text-small">
-			              <li><a class="text-muted" href="#">About Us</a></li>
-			              <li><a class="text-muted" href="#">Shipping &amp; Returns</a></li>
-			              <li><a class="text-muted" href="#">Shipping Guide</a></li>
-			              <li><a class="text-muted" href="#">FAQ</a></li>
-			            </ul>
-	          		</div>
-	          		<div class="col-3 mt-4">
-	          			<h5>Stay Connected</h5>
-			            <ul class="list-unstyled text-small">
-			              <li><a class="text-muted" href="#">Team</a></li>
-			              <li><a class="text-muted" href="#">Locations</a></li>
-			              <li><a class="text-muted" href="#">Privacy</a></li>
-			              <li><a class="text-muted" href="#">Terms</a></li>
-			            </ul>
-			          </div>
+						<ul class="list-unstyled text-small">
+							<li>
+								<a class="text-muted" href="#">About Us</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Shipping &amp; Returns</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Shipping Guide</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">FAQ</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-3 mt-4">
+						<h5>Stay Connected</h5>
+						<ul class="list-unstyled text-small">
+							<li>
+								<a class="text-muted" href="#">Team</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Locations</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Privacy</a>
+							</li>
+							<li>
+								<a class="text-muted" href="#">Terms</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</footer>
 	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/code_2.js"></script>
 </body>
+
 </html>

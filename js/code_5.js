@@ -104,7 +104,7 @@ $(window).on('load', function () {
 	addToPage();
 });
 function addToPage() {
-	for (keys in products) {
+	for (var keys in products) {
 		var appendToDropDown = '<option class="capitalize" value="' + keys + '">' + keys + '</option>';
 		$("#user-select").append(appendToDropDown);
 	}
@@ -128,7 +128,6 @@ function addToPage() {
 			$('#' + arr[j][1][i].category + [i + 1] + ' .category').text(arr[j][1][i].category);
 			$('#' + arr[j][1][i].category + [i + 1] + ' .price').text(arr[j][1][i].price);
 			$('#' + arr[j][1][i].category + [i + 1] + ' .img').attr('src', arr[j][1][i].picture_url);
-			// console.log(arr[j][1][i].picture_url);
 		}
 	}
 }
