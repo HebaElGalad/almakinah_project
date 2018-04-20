@@ -71,7 +71,6 @@ var products = {
 	]
 };
 
-
 // This event listen on the dropdown of the categories
 // and show and hide them depends on the user input
 $('#user-select').on('change', function (event) {
@@ -98,7 +97,6 @@ $('#user-select').on('change', function (event) {
 		$(".books").hide();
 	}
 });
-
 
 $(window).on('load', function () {
 	addToPage();
@@ -132,7 +130,6 @@ function addToPage() {
 	}
 }
 
-
 document.getElementById('search-bar').addEventListener('submit', function (e) {
 	e.preventDefault();
 	// var arr = Object.entries(products);
@@ -142,6 +139,7 @@ document.getElementById('search-bar').addEventListener('submit', function (e) {
 	// drop-down menu
 	var optionSelect = document.getElementById('user-select');
 	var userOption = optionSelect.value;
+	var searchFoundReturn;
 	if (userOption === "categ") {
 		for (var i = 0; i <= Object.entries(products)[i].length; i++) {
 			for (var j = 0; j < Object.entries(products)[i][1].length; j++) {
@@ -149,7 +147,7 @@ document.getElementById('search-bar').addEventListener('submit', function (e) {
 					$(".books").hide();
 					$(".movies").hide();
 					$(".albums").hide();
-					var searchFoundReturn = Object.entries(products)[i][1][j].id;
+					searchFoundReturn = Object.entries(products)[i][1][j].id;
 					$("#" + searchFoundReturn).show();
 				}
 			}
@@ -163,16 +161,14 @@ document.getElementById('search-bar').addEventListener('submit', function (e) {
 						$(".books").hide();
 						$(".movies").hide();
 						$(".albums").hide();
-						var searchFoundReturn = Object.entries(products)[x][1][k].id;
+						searchFoundReturn = Object.entries(products)[x][1][k].id;
 						$("#" + searchFoundReturn).show();
-						alert(searchFoundReturn);
 					}
 				}
 			}
 		}
 	}
 });
-
 
 $("#addtocart").on('click', function (event) {
 	event.preventDefault();
