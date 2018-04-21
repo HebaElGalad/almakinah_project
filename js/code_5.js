@@ -111,11 +111,11 @@ function addToPage() {
 		for (var i = 0; i < Object.entries(products)[j][1].length; i++) {
 			var cardContent = '<div class="col-4">\
 								<div id="'+ i + '" class="card p-4 border-0 text-center product" style="width: 18rem;">\
-									<img class="card-img-top img"  alt="Card image cap"> \
+									<a href="details.html"><img class="card-img-top img"  alt="Card image cap"></a> \
 								  	<div class="card-body"> \
 									    <h5 class="card-title name"></h5> \
 									    <p class="card-text category"></p> \
-									    <a href="details.html" class="btn btn-primary price"></a> \
+									    <a href="cart.html" class="btn btn-primary price"></a> \
 								  	</div>\
 								</div>\
 							 </div>'
