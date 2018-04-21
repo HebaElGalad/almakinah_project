@@ -2,71 +2,71 @@ var products = {
 	"books": [
 		{
 			"id": "books1",
-			"name": "python",
+			"name": "Python",
 			"category": "books",
 			"picture_url": "images/python.jpg",
-			"price": 540,
+			"price": '540LE'
 		},
 		{
 			"id": "books2",
 			"name": "php",
 			"category": "books",
 			"picture_url": "images/php.jpg",
-			"price": 850
+			"price": '850LE'
 		},
 
 		{
 			"id": "books3",
-			"name": "js",
+			"name": "Javascript",
 			"category": "books",
 			"picture_url": "images/javascript.jpg",
-			"price": 590
+			"price": '590LE'
 		}
 	],
 	"albums": [
 		{
 			"id": "albums1",
-			"name": "metallica",
+			"name": "Metallica",
 			"category": "albums",
 			"picture_url": "images/metallica.jpg",
-			"price": 400
+			"price": '400LE'
 		},
 		{
 			"id": "albums2",
-			"name": "garage inc",
+			"name": "Garage Inc",
 			"category": "albums",
 			"picture_url": "images/garage_inc.jpg",
-			"price": 400
+			"price": '400LE'
 		},
 		{
 			"id": "albums3",
-			"name": "hardwired",
+			"name": "Hardwired",
 			"category": "albums",
 			"picture_url": "images/hardwired.jpg",
-			"price": 400
+			"price": '400LE'
 		}
 	],
 	"movies": [
 		{
 			"id": "movies1",
-			"name": "casper",
+			"name": "Casper",
 			"category": "movies",
 			"picture_url": "images/casper.jpg",
-			"price": 450
+			"price": '450LE'
 		},
 		{
 			"id": "movies2",
-			"name": "the mask",
+			"name": "The Mask",
 			"category": "movies",
 			"picture_url": "images/the_mask.jpg",
-			"price": 450
+			"price": '450LE'
 		},
 		{
 			"id": "movies3",
-			"name": "home alone",
+			"name": "Home Alone",
 			"category": "movies",
 			"picture_url": "images/home_alone.jpg",
-			"price": 450
+			"price": '450LE'
 		}
 	]
 };
@@ -109,9 +109,10 @@ function addToPage() {
 	var arr = Object.entries(products);
 	for (var j = 0; j < Object.keys(products).length; j++) {
 		for (var i = 0; i < Object.entries(products)[j][1].length; i++) {
+			var id =  arr[j][1][i].category + [i + 1];
 			var cardContent = '<div class="col-4">\
 								<div id="'+ i + '" class="card p-4 border-0 text-center product" style="width: 18rem;">\
-									<a href="details.html"><img class="card-img-top img"  alt="Card image cap"></a> \
+									<a href="details.html?id='+ id +'"><img class="card-img-top img"  alt="Card image cap"></a> \
 								  	<div class="card-body"> \
 									    <h5 class="card-title name"></h5> \
 									    <p class="card-text category"></p> \
@@ -175,3 +176,22 @@ $("#addtocart").on('click', function (event) {
 	localStorage.setItem(500, JSON.stringify(posts[0].attributes));
 	JSON.parse(localStorage.getItem(500));
 });
+
+
+function addToDetails() {
+	var querystring = window.location.search.substring(1);
+	var equalIndex = querystring.indexOf('=');
+	var idValue = querystring.slice(equalIndex+1);
+	var arr = Object.entries(products);
+	for (var j = 0; j < Object.keys(products).length; j++){
+		for (var i = 0; i < Object.entries(products)[j][1].length; i++){
+			if (idValue === arr[j][1][i].id) {
+				$('#details .product-name').text(arr[j][1][i].name);
+				$('#details .category').text(arr[j][1][i].category);
+				$('#details .price').text(arr[j][1][i].price);
+				$('#details .picture_url').attr('src', arr[j][1][i].picture_url);
+			}
+		}
+	}
+	
+}
