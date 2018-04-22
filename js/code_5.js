@@ -98,40 +98,6 @@ $('#user-select').on('change', function (event) {
 	}
 });
 
-$(window).on('load', function () {
-	addToPage();
-});
-function addToPage() {
-	document.querySelector("#cart .price").innerHTML = localStorage.getItem("price");
-	for (var keys in products) {
-		var appendToDropDown = '<option class="capitalize" value="' + keys + '">' + keys + '</option>';
-		$("#user-select").append(appendToDropDown);
-	}
-	var arr = Object.entries(products);
-	for (var j = 0; j < Object.keys(products).length; j++) {
-		for (var i = 0; i < Object.entries(products)[j][1].length; i++) {
-			var id =  arr[j][1][i].category + [i + 1];
-			var cardContent = '<div class="col-4">\
-								<div id="'+ i + '" class="card p-4 border-0 text-center product" style="width: 18rem;">\
-									<a href="details.html?id='+ id +'"><img class="card-img-top img"  alt="Card image cap"></a> \
-								  	<div class="card-body"> \
-									    <h5 class="card-title name"></h5> \
-									    <p class="card-text category"></p> \
-									    <a href="details.html?id='+ id +'" class="btn btn-primary price"></a> \
-								  	</div>\
-								</div>\
-							 </div>'
-			$('#products').append(cardContent);
-			$('#' + i).attr("id", arr[j][1][i].category + [i + 1]);
-			$('#' + arr[j][1][i].category + [i + 1]).addClass(arr[j][1][i].category);
-			$('#' + arr[j][1][i].category + [i + 1] + ' .name').text(arr[j][1][i].name);
-			$('#' + arr[j][1][i].category + [i + 1] + ' .category').text(arr[j][1][i].category);
-			$('#' + arr[j][1][i].category + [i + 1] + ' .price').text(arr[j][1][i].price);
-			$('#' + arr[j][1][i].category + [i + 1] + ' .img').attr('src', arr[j][1][i].picture_url);
-		}
-	}
-}
-
 document.getElementById('search-bar').addEventListener('submit', function (e) {
 	e.preventDefault();
 	// var arr = Object.entries(products);
@@ -171,6 +137,40 @@ document.getElementById('search-bar').addEventListener('submit', function (e) {
 		}
 	}
 });
+
+$(window).on('load', function () {
+	addToPage();
+});
+function addToPage() {
+	document.querySelector("#cart .price").innerHTML = localStorage.getItem("price");
+	for (var keys in products) {
+		var appendToDropDown = '<option class="capitalize" value="' + keys + '">' + keys + '</option>';
+		$("#user-select").append(appendToDropDown);
+	}
+	var arr = Object.entries(products);
+	for (var j = 0; j < Object.keys(products).length; j++) {
+		for (var i = 0; i < Object.entries(products)[j][1].length; i++) {
+			var id =  arr[j][1][i].category + [i + 1];
+			var cardContent = '<div class="col-4">\
+								<div id="'+ i + '" class="card p-4 border-0 text-center product" style="width: 18rem;">\
+									<a href="details.html?id='+ id +'"><img class="card-img-top img"  alt="Card image cap"></a> \
+								  	<div class="card-body"> \
+									    <h5 class="card-title name"></h5> \
+									    <p class="card-text category"></p> \
+									    <a href="details.html?id='+ id +'" class="btn btn-primary price"></a> \
+								  	</div>\
+								</div>\
+							 </div>'
+			$('#products').append(cardContent);
+			$('#' + i).attr("id", arr[j][1][i].category + [i + 1]);
+			$('#' + arr[j][1][i].category + [i + 1]).addClass(arr[j][1][i].category);
+			$('#' + arr[j][1][i].category + [i + 1] + ' .name').text(arr[j][1][i].name);
+			$('#' + arr[j][1][i].category + [i + 1] + ' .category').text(arr[j][1][i].category);
+			$('#' + arr[j][1][i].category + [i + 1] + ' .price').text(arr[j][1][i].price);
+			$('#' + arr[j][1][i].category + [i + 1] + ' .img').attr('src', arr[j][1][i].picture_url);
+		}
+	}
+}
 
 function addToDetails() {
 	var querystring = window.location.search.substring(1);
