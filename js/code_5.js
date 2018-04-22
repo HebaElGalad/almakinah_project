@@ -117,7 +117,7 @@ function addToPage() {
 								  	<div class="card-body"> \
 									    <h5 class="card-title name"></h5> \
 									    <p class="card-text category"></p> \
-									    <a href="cart.html" class="btn btn-primary price"></a> \
+									    <a href="details.html?id='+ id +'" class="btn btn-primary price"></a> \
 								  	</div>\
 								</div>\
 							 </div>'
